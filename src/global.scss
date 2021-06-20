@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+// custom fonts
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+$family-primary: 'Lato', sans-serif;
+
+//custom colours
+$primary: #00d1b2;
+
+/*
+// other colour options
+  $link
+  $link-hover
+  $link-active
+  $link-visited
+  $info
+  $success
+  $warning
+  $danger
+*/
+
+// restore default behaviour
+$body-overflow-y: auto;
+
+// Import only what you need from Bulma
+@import "../node_modules/bulma/sass/utilities/_all";
+@import "../node_modules/bulma/sass/base/_all";
+@import "../node_modules/bulma/sass/elements/_all";
+@import "../node_modules/bulma/sass/form/_all";
+@import "../node_modules/bulma/sass/components/_all";
+@import "../node_modules/bulma/sass/grid/_all";
+@import "../node_modules/bulma/sass/helpers/_all";
+@import "../node_modules/bulma/sass/layout/_all";

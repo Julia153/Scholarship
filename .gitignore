@@ -1,0 +1,7 @@
+.DS_Store
+.iCloud
+/node_modules
+/.svelte
+/.svelte-kit
+/build
+/functions
