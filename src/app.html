@@ -1,15 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="/favicon.ico">
-    %svelte.head%
-  </head>
+    <script src="https://kit.fontawesome.com/590e4b0da7.js" crossorigin="anonymous"></script> %svelte.head%
+</head>
 
-  <body id="svelte">
+<body id="svelte">
     %svelte.body%
-  </body>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyB-qdG6j6fDvmbwd5yAO9kh0EFtMTg-B1g",
+            authDomain: "skyship-communication.firebaseapp.com",
+            projectId: "skyship-communication",
+            storageBucket: "skyship-communication.appspot.com",
+            messagingSenderId: "642020364371",
+            appId: "1:642020364371:web:1ab67266b66b98128cf6a6"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // create the database variable so that the rest of the app can use it
+        const db = firebase.firestore()
+    </script>
+</body>
 
 </html>
