@@ -35,7 +35,6 @@
       );
       birdCounter = 0;
     }
-    
   }
 
   //saying dog
@@ -165,7 +164,7 @@
   <!--Home button-->
   <div id="homeContainer">
     <div id="vertical-placement-home">
-      <a href="/">
+      <a href="/home">
         <i style=" font-size: 100px; color: black;" class="fas fa-home" />
       </a>
     </div>
@@ -176,7 +175,7 @@
     <!--Rabbit button-->
     <div on:click={frog} class="button">
       <i class="fas fa-frog" />
-      <p id="buttonText" >Frog</p>
+      <p id="buttonText">Frog</p>
     </div>
     <!--horse button-->
     <div on:click={horse} class="button">

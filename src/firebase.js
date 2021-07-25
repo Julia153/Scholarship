@@ -6,6 +6,15 @@ import firebase from "firebase/app"
 import 'firebase/auth'
 import 'firebase/firestore'
 
+import {get } from "svelte/store"
+
+
+export function viewLoginPage() {
+    let userInfo = get(user)
+    if (userInfo.uid == undefined) {
+        window.location.replace("/login");
+    }
+}
 //configuration variables for your specfic firebase project (do not copy other ones from places like w3 schools @julia)
 const firebaseConfig = {
     apiKey: "AIzaSyB-qdG6j6fDvmbwd5yAO9kh0EFtMTg-B1g",

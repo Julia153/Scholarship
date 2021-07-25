@@ -16,62 +16,68 @@
       let speech = new SpeechSynthesisUtterance("I am hurt");
       window.speechSynthesis.speak(speech);
     } else {
-      alert("Please only press the word buttons once, sometimes they take a second to speak")
-      hurtCounter = 0
+      alert(
+        "Please only press the word buttons once, sometimes they take a second to speak"
+      );
+      hurtCounter = 0;
     }
   }
 
   //saying i need to use the bathroom
   function bathroom() {
-    bathroomCounter++
+    bathroomCounter++;
     if (bathroomCounter <= 2) {
-let speech = new SpeechSynthesisUtterance("I need to use the bathroom");
-    window.speechSynthesis.speak(speech);
+      let speech = new SpeechSynthesisUtterance("I need to use the bathroom");
+      window.speechSynthesis.speak(speech);
     } else {
-      alert("Please only press the word buttons once, sometimes they take a second to speak");
+      alert(
+        "Please only press the word buttons once, sometimes they take a second to speak"
+      );
       bathroomCounter = 0;
     }
-    
   }
 
   //saying i need help
   function help() {
-    helpCounter++
+    helpCounter++;
     if (helpCounter <= 2) {
-let speech = new SpeechSynthesisUtterance("I need help");
-    window.speechSynthesis.speak(speech);
+      let speech = new SpeechSynthesisUtterance("I need help");
+      window.speechSynthesis.speak(speech);
     } else {
-       alert("Please only press the word buttons once, sometimes they take a second to speak");
-       helpCounter = 0;
+      alert(
+        "Please only press the word buttons once, sometimes they take a second to speak"
+      );
+      helpCounter = 0;
     }
-    
   }
 
   //saying i am hungry
   function hungry() {
-    hungryCounter++
+    hungryCounter++;
     if (hungryCounter <= 2) {
       let speech = new SpeechSynthesisUtterance("I am hungry");
-    window.speechSynthesis.speak(speech);
+      window.speechSynthesis.speak(speech);
     } else {
-      alert("Please only press the word buttons once, sometimes they take a second to speak");
+      alert(
+        "Please only press the word buttons once, sometimes they take a second to speak"
+      );
       hungryCounter = 0;
     }
-    
   }
 
   //saying i am thirsty
   function thirsty() {
-    thirstyCounter ++
+    thirstyCounter++;
 
     if (thirstyCounter <= 2) {
       let speech = new SpeechSynthesisUtterance("I am thirsty");
-    window.speechSynthesis.speak(speech);
+      window.speechSynthesis.speak(speech);
     } else {
-      alert("Please only press the word buttons once, sometimes they take a second to speak");
+      alert(
+        "Please only press the word buttons once, sometimes they take a second to speak"
+      );
       thirstyCounter = 0;
     }
-    
   }
 
   //saying i am tired
@@ -80,12 +86,13 @@ let speech = new SpeechSynthesisUtterance("I need help");
 
     if (tiredCounter <= 2) {
       let speech = new SpeechSynthesisUtterance("I am tired");
-    window.speechSynthesis.speak(speech);
+      window.speechSynthesis.speak(speech);
     } else {
-      alert("Please only press the word buttons once, sometimes they take a second to speak");
+      alert(
+        "Please only press the word buttons once, sometimes they take a second to speak"
+      );
       tiredCounter = 0;
     }
-    
   }
 </script>
 
@@ -146,7 +153,7 @@ let speech = new SpeechSynthesisUtterance("I need help");
     margin-top: 70px;
   }
 
-    #buttonText {
+  #buttonText {
     margin-left: 90px;
     font-size: 20px;
   }
@@ -163,7 +170,7 @@ let speech = new SpeechSynthesisUtterance("I need help");
   <!--linking the home button-->
   <div id="homeContainer">
     <div id="vertical-placement-home">
-      <a href="/">
+      <a href="/home">
         <i style=" font-size: 100px; color: black;" class="fas fa-home" />
       </a>
     </div>

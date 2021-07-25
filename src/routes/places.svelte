@@ -41,7 +41,7 @@
   //saying pool
 
   function pool() {
-    poolCounter ++
+    poolCounter++;
     if (poolCounter <= 2) {
       let speech = new SpeechSynthesisUtterance("pool");
       window.speechSynthesis.speak(speech);
@@ -69,32 +69,30 @@
 
   //saying home
   function homePlace() {
-    homePlaceCounter++
+    homePlaceCounter++;
     if (homePlaceCounter <= 2) {
       let speech = new SpeechSynthesisUtterance("home");
-    window.speechSynthesis.speak(speech);
+      window.speechSynthesis.speak(speech);
     } else {
       alert(
         "Please only press the button once, sometimes it takes a second for the word to speak"
       );
       homePlaceCounter = 0;
     }
-    
   }
 
   //saying park
   function park() {
-    parkCounter++
+    parkCounter++;
     if (parkCounter <= 2) {
-let speech = new SpeechSynthesisUtterance("park");
-    window.speechSynthesis.speak(speech);
+      let speech = new SpeechSynthesisUtterance("park");
+      window.speechSynthesis.speak(speech);
     } else {
       alert(
         "Please only press the button once, sometimes it takes a second for the word to speak"
       );
       parkCounter = 0;
     }
-    
   }
 </script>
 
@@ -143,16 +141,14 @@ let speech = new SpeechSynthesisUtterance("park");
     margin-top: 70px;
   }
 
-    #buttonText {
+  #buttonText {
     text-align: center;
     font-size: 20px;
-
   }
 
   #body {
     height: 1300px;
   }
-
 </style>
 
 <div id="body">
@@ -164,7 +160,7 @@ let speech = new SpeechSynthesisUtterance("park");
   <!--home button-->
   <div id="homeContainer">
     <div id="vertical-placement-home">
-      <a href="/">
+      <a href="/home">
         <i style="font-size: 100px; color: black;" class="fas fa-home" />
       </a>
     </div>
@@ -172,9 +168,9 @@ let speech = new SpeechSynthesisUtterance("park");
 
   <div id="container">
     <!--home button-->
-    <div id="homePlaceDiv"on:click={homePlace} class="button">
+    <div id="homePlaceDiv" on:click={homePlace} class="button">
       <i id="homePlace" class="fas fa-home" />
-     <p id="buttonText">Home</p>
+      <p id="buttonText">Home</p>
     </div>
     <!--park button-->
     <div id="parkDiv" on:click={park} class="button">
@@ -188,7 +184,10 @@ let speech = new SpeechSynthesisUtterance("park");
     </div>
     <!--playground button-->
     <div id="playgroundDiv" on:click={playground} class="button">
-      <img style="width: 50%;, height: 50%; margin-top: 30px; margin-left: 100px; " src="swing.png" alt="swing" />
+      <img
+        style="width: 50%;, height: 50%; margin-top: 30px; margin-left: 100px; "
+        src="swing.png"
+        alt="swing" />
       <p id="buttonText">Playground</p>
     </div>
     <!--zoo button-->
