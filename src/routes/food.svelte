@@ -167,7 +167,7 @@
   <!-- home button -->
   <div id="homeContainer">
     <div id="vertical-placement-home">
-      <a href="/">
+      <a href="/home">
         <i style=" font-size: 100px; color: black;" class="fas fa-home" />
       </a>
     </div>

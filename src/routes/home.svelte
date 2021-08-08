@@ -2,11 +2,12 @@
   //import { onMount } from "svelte";
   import { user } from "../stores.js";
   import { viewLoginPage } from "../firebase.js";
+  //import { categories } from "./settings.svelte";
 
   // onMount(() => {
   //  viewLoginPage();
   // });
-
+ 
   function logOut() {
     $user.uid = undefined;
   }
@@ -148,21 +149,21 @@
 
     <a id="emotions" href="/emotions">
       <div class="button">
-        <img id="emotionsIcon" src="emotions.png" alt="emotions icon" />
+        <img style=" height: 65%; width: auto; " id="emotionsIcon" src="emotions.png" alt="emotions icon" />
         <p id="buttonText">Emotions</p>
       </div>
     </a>
     <!--Button for places-->
     <a id="places" href="/places">
       <div class="button">
-        <img id="placesIcon" src="places.png" alt="Places icon" />
+        <img style="height: 65%; width: auto;"id="placesIcon" src="places.png" alt="Places icon" />
         <p id="buttonText">Places</p>
       </div>
     </a>
     <!--Button for phrases-->
     <a id="phrases" href="/phrases">
       <div class="button">
-        <img id="phrasesIcon" src="phrases.png" alt="phrases icon" />
+        <img style="height: 65%; width: auto;"id="phrasesIcon" src="phrases.png" alt="phrases icon" />
         <p id="buttonText">Phrases</p>
       </div>
     </a>

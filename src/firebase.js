@@ -1,5 +1,8 @@
 //importing the user store so that we are able to set the user values during login / sign up
+
 import { user } from "./stores"
+//import { newCategory } from "./stores"
+
 
 //importing firebase to the firebase.js file then importing the auth and firestore (database) module
 import firebase from "firebase/app"
@@ -12,8 +15,11 @@ import {get } from "svelte/store"
 export function viewLoginPage() {
     let userInfo = get(user)
     if (userInfo.uid == undefined) {
-        window.location.replace("/login");
+        window.location.replace("/");
     }
+}
+export function homePage() {
+    window.location.replace("/home")
 }
 //configuration variables for your specfic firebase project (do not copy other ones from places like w3 schools @julia)
 const firebaseConfig = {
@@ -46,10 +52,12 @@ export async function signup() {
 
     //saves the users information to the database
     db.collection('users').doc(loginData.user.uid).set({
-        email: loginData.user.email,
-        name: loginData.user.displayName
-            //add any other information you need to save about the user here eg, teams they play for etc
-    })
+            email: loginData.user.email,
+            name: loginData.user.displayName
+                //add any other information you need to save about the user here eg, teams they play for etc
+        })
+        //window.location.replace("/home")
+
 }
 
 //login function -> used for when the user has used the app in the past
@@ -67,11 +75,25 @@ export async function login(nextPage = undefined) {
             uid: loginData.user.uid,
             ...userData
         })
+
+        //window.location.replace("/home")
     } else {
         console.error("LOGIN ERROR: user not found...")
     }
 }
-
+export function saveCategory() {
+    let i = "num"
+    let a = "weather"
+    db.collection("users").doc($user.uid).set({
+            a: [i],
+        })
+        .then(() => {
+            console.log("Document successfully written!");
+        })
+        .catch((error) => {
+            console.error("Error writing document: ", error);
+        });
+}
 //logout function
 export function logout() {
     //signs out the user

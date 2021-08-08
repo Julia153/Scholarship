@@ -1,12 +1,15 @@
 <script>
-let categories = [
-  "Emotions",
-  "Places",
-  "Phrases",
-  "Food",
-  "Animals"
+import {  saveCategory } from "../firebase.js"
+import {newCategory, user} from "../stores.js"
 
-]
+let newCategory2
+function addCategory() {
+  newCategory2 = newCategory
+  saveCategory()
+}
+function check() {
+  console.log(user);
+}
 </script>
 <style>
   * {
@@ -24,9 +27,12 @@ let categories = [
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
   }
+
+  
 </style>
 
 <h1 class="title">Settings</h1>
+
 <div id="homeContainer">
   <div id="vertical-placement-home">
     <a href="/home">
@@ -35,8 +41,12 @@ let categories = [
   </div>
 </div>
 
-<input type="text" class="input" placeholder="Enter new category here:">
-<button class="button">Add category</button>
+<input type="text" class="input" bind:value={newCategory2} placeholder="Enter new category here:">
+<button class="button" on:click={addCategory}>Add category</button>
+<button on:click={check}>button</button>
+
+
+
 
 
 

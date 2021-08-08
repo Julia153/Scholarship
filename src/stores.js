@@ -4,3 +4,5 @@ export const user = writable({
     uid: undefined,
     email: undefined
 })
+
+export let newCategory = writable();
