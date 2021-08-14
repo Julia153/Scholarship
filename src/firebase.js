@@ -1,6 +1,6 @@
 //importing the user store so that we are able to set the user values during login / sign up
 
-import { user } from "./stores"
+import { user, abb } from "./stores"
 //import { newCategory } from "./stores"
 
 
@@ -60,7 +60,7 @@ export async function signup() {
 
 }
 
-//login function -> used for when the user has used the app in the past
+//LOGIN FUNCTION -> used for when the user has used the app in the past
 export async function login(nextPage = undefined) {
     let loginData = await auth.signInWithPopup(provider)
 
@@ -69,31 +69,51 @@ export async function login(nextPage = undefined) {
 
     if (userRef.exists) {
         let userData = userRef.data()
-
-        //updates the user store with the users info
+            //location.href = "home";
+            //updates the user store with the users info
         user.set({
             uid: loginData.user.uid,
             ...userData
-        })
 
-        //window.location.replace("/home")
+        })
     } else {
-        console.error("LOGIN ERROR: user not found...")
+        console.error(`LOGIN ERROR: user not found...`)
+        document.getElementById("userOutput").innerHTML = "user not found :( check you typed everything correct or create a new account";
     }
 }
 export function saveCategory() {
-    let i = "num"
-    let a = "weather"
-    db.collection("users").doc($user.uid).set({
-            a: [i],
+    // db.collection("users").doc(user.uid).get().set({
+    //     Weather: ["windy"],
+    // });
+    var sun =
+        //saves the users information to the database
+        db.collection('users').doc(sun).set({
+            weather: ["bingo", ]
+                //add any other information you need to save about the user here eg, teams they play for etc
         })
-        .then(() => {
-            console.log("Document successfully written!");
-        })
-        .catch((error) => {
-            console.error("Error writing document: ", error);
-        });
+        //window.location.replace("/home")
+
 }
+
+//console.log(user.uid)
+//var userUid = get(user);
+//let newCategory = "weather";
+//db.collection("categories").add({
+//    Weather: ["windy", ]
+// }).then((docRef) => {})
+
+// let usersCollection = db.collection("users").doc();
+// return usersCollection.update({
+//         "weather": ["windy", ]
+//     }).then(() => {
+//         console.log("Document successfully updated!");
+//     })
+//     .catch((error) => {
+//         // The document probably doesn't exist.
+//         console.error("Error updating document: ", error);
+//     });
+
+
 //logout function
 export function logout() {
     //signs out the user

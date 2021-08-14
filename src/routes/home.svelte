@@ -1,9 +1,9 @@
 <script>
   //import { onMount } from "svelte";
   import { user } from "../stores.js";
-  import { viewLoginPage } from "../firebase.js";
+  import { viewLoginPage, logout } from "../firebase.js";
   //import { categories } from "./settings.svelte";
-
+ console.log("home page", $user.name)
   // onMount(() => {
   //  viewLoginPage();
   // });
@@ -139,7 +139,7 @@
   {:else}
     <h1 class="header">Hello {$user.name}</h1>
     <!--Button to logout-->
-    <a id="logOutLink" on:click={logOut} href="/">Logout </a>
+    <a id="logOutLink" on:click={logout} href="/">Logout </a>
     <!--Button to go to settings-->
     <a id="settingsLink" href="/settings">Settings</a>
   {/if}

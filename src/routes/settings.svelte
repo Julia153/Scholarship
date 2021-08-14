@@ -1,12 +1,17 @@
 <script>
-import {  saveCategory } from "../firebase.js"
-import {newCategory, user} from "../stores.js"
+import {  saveCategory } from "../firebase.js";
+import {abb} from "../stores.js";
+ //import { onMount } from "svelte";
+  import { user } from "../stores.js";
+  import { viewLoginPage } from "../firebase.js";
 
-let newCategory2
+console.log("this is the users info on the settings page", $user.name);
+
 function addCategory() {
-  newCategory2 = newCategory
+
   saveCategory()
 }
+
 function check() {
   console.log(user);
 }
@@ -41,9 +46,14 @@ function check() {
   </div>
 </div>
 
-<input type="text" class="input" bind:value={newCategory2} placeholder="Enter new category here:">
+<!-- <input type="text" class="input" bind:value={leggo} placeholder="Enter new category here:"> -->
 <button class="button" on:click={addCategory}>Add category</button>
-<button on:click={check}>button</button>
+<div class="select">
+<select>
+<option>Weather</option>
+<option>Numbers</option>
+</select>
+</div>
 
 
 
