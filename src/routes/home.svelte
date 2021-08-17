@@ -30,49 +30,8 @@
     border-radius: 10px;
     background-color: #f5f6f4;
   }
-@media only screen and (max-width: 400px) {
-  #titleimg {
-      height: 200px; width: auto; margin-top: 30px; 
-    }
 
-    #body {
-      height: 2050px;
-
-    }
-}
   @media only screen and (min-width: 400px) and (max-width: 950px) {
-    #container3 {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
-    #container4 {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
-    #titleimg {
-    height: 300px;
-    width: auto;
-  }
-  }
-
-  @media only screen and (min-width: 950px) {
-    #container3 {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      margin-left: 70px;
-    }
-    #container4 {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
-    #titleimg {
-    height: 300px;
-    width: auto;
-  }
   }
 
   /* Changing the color of the buttons for settings and to log out*/
@@ -115,7 +74,10 @@
     margin-top: 30px;
   }
 
-  
+  #titleimg {
+    height: 300px;
+    width: auto;
+  }
 
   #buttonText {
     color: black;
@@ -152,61 +114,56 @@
 
   <div id="row">
 
-    <div id="container3">
-      <a id="emotions" href="/emotions">
-        <div id="column" class="button">
-          <img
-            style=" height: 65%; width: auto; "
-            id="emotionsIcon"
-            src="emotions.png"
-            alt="emotions icon" />
-          <p id="buttonText">Emotions</p>
-        </div>
-      </a>
-      <!--Button for places-->
-      <a id="places" href="/places">
-        <div id="column" class="button">
-          <img
-            style="height: 65%; width: auto;"
-            id="placesIcon"
-            src="places.png"
-            alt="Places icon" />
-          <p id="buttonText">Places</p>
-        </div>
-      </a>
-
-      <div id="container4">
-        <!--Button for phrases-->
-        <a id="phrases" href="/phrases">
-          <div id="column" class="button">
-            <img
-              style="height: 65%; width: auto;"
-              id="phrasesIcon"
-              src="phrases.png"
-              alt="phrases icon" />
-            <p id="buttonText">Phrases</p>
-          </div>
-        </a>
+    <a id="emotions" href="/emotions">
+      <div id="column" class="button">
+        <img
+          style=" height: 65%; width: auto; "
+          id="emotionsIcon"
+          src="emotions.png"
+          alt="emotions icon" />
+        <p id="buttonText">Emotions</p>
       </div>
+    </a>
+    <!--Button for places-->
+    <a id="places" href="/places">
+      <div id="column" class="button">
+        <img
+          style="height: 65%; width: auto;"
+          id="placesIcon"
+          src="places.png"
+          alt="Places icon" />
+        <p id="buttonText">Places</p>
+      </div>
+    </a>
 
-      <!--button for food-->
+    <!--Button for phrases-->
+    <a id="phrases" href="/phrases">
+      <div id="column" class="button">
+        <img
+          style="height: 65%; width: auto;"
+          id="phrasesIcon"
+          src="phrases.png"
+          alt="phrases icon" />
+        <p id="buttonText">Phrases</p>
+      </div>
+    </a>
 
-      <a id="food" href="/food">
-        <div id="column" class="button">
-          <img id="foodIcon" src="food.png" alt="food icon" />
-          <p id="buttonText">Food</p>
-        </div>
-      </a>
+    <!--button for food-->
 
-      <!--button for animals-->
-      <a id="animals" href="/animals">
-        <div id="column" class="button">
-          <img id="animalsIcon" src="animals.png" alt="animals icon" />
-          <p id="buttonText">Animals</p>
-        </div>
-      </a>
-    </div>
+    <a id="food" href="/food">
+      <div id="column" class="button">
+        <img id="foodIcon" src="food.png" alt="food icon" />
+        <p id="buttonText">Food</p>
+      </div>
+    </a>
 
+    <!--button for animals-->
+    <a id="animals" href="/animals">
+      <div id="column" class="button">
+        <img id="animalsIcon" src="animals.png" alt="animals icon" />
+        <p id="buttonText">Animals</p>
+      </div>
+    </a>
   </div>
 
 </div>
