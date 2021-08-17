@@ -3,11 +3,11 @@
   import { user } from "../stores.js";
   import { viewLoginPage, logout } from "../firebase.js";
   //import { categories } from "./settings.svelte";
- console.log("home page", $user.name)
+  console.log("home page", $user.name);
   // onMount(() => {
   //  viewLoginPage();
   // });
- 
+
   function logOut() {
     $user.uid = undefined;
   }
@@ -31,43 +31,7 @@
     background-color: #f5f6f4;
   }
 
-  @media only screen and (max-width: 599px) {
-    #container1 {
-      margin-left: 50px;
-      display: flex;
-      flex-direction: column;
-    }
-
-    #container2 {
-      margin-left: 50px;
-      display: flex;
-      flex-direction: column;
-    }
-
-    #body {
-      background-color: #80cddb;
-    }
-  }
-
-  /* setting buttons to be in a row*/
-  #container1 {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-left: 100px;
-  }
-  /* setting buttons to be in a row*/
-  #container2 {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-left: 100px;
-  }
-  /* Setting the background color, and height of the page*/
-  #body {
-    background-color: #80cddb;
-    height: 1200px;
-    margin: 0px;
+  @media only screen and (min-width: 400px) and (max-width: 950px) {
   }
 
   /* Changing the color of the buttons for settings and to log out*/
@@ -123,6 +87,10 @@
   .header {
     text-align: center;
   }
+
+  #body {
+    background-color: #80cddb;
+  }
 </style>
 
 <!--Div for whole page to set background color-->
@@ -139,53 +107,63 @@
   {:else}
     <h1 class="header">Hello {$user.name}</h1>
     <!--Button to logout-->
-    <a id="logOutLink" on:click={logout} href="/">Logout </a>
+    <a id="logOutLink" on:click={logout} href="/">Logout</a>
     <!--Button to go to settings-->
     <a id="settingsLink" href="/settings">Settings</a>
   {/if}
 
-  <!--Buttons for emotions-->
-  <div id="container1">
+  <div id="row">
 
     <a id="emotions" href="/emotions">
-      <div class="button">
-        <img style=" height: 65%; width: auto; " id="emotionsIcon" src="emotions.png" alt="emotions icon" />
+      <div id="column" class="button">
+        <img
+          style=" height: 65%; width: auto; "
+          id="emotionsIcon"
+          src="emotions.png"
+          alt="emotions icon" />
         <p id="buttonText">Emotions</p>
       </div>
     </a>
     <!--Button for places-->
     <a id="places" href="/places">
-      <div class="button">
-        <img style="height: 65%; width: auto;"id="placesIcon" src="places.png" alt="Places icon" />
+      <div id="column" class="button">
+        <img
+          style="height: 65%; width: auto;"
+          id="placesIcon"
+          src="places.png"
+          alt="Places icon" />
         <p id="buttonText">Places</p>
       </div>
     </a>
+
     <!--Button for phrases-->
     <a id="phrases" href="/phrases">
-      <div class="button">
-        <img style="height: 65%; width: auto;"id="phrasesIcon" src="phrases.png" alt="phrases icon" />
+      <div id="column" class="button">
+        <img
+          style="height: 65%; width: auto;"
+          id="phrasesIcon"
+          src="phrases.png"
+          alt="phrases icon" />
         <p id="buttonText">Phrases</p>
       </div>
     </a>
 
-    <div id="container2">
+    <!--button for food-->
 
-      <!--button for food-->
+    <a id="food" href="/food">
+      <div id="column" class="button">
+        <img id="foodIcon" src="food.png" alt="food icon" />
+        <p id="buttonText">Food</p>
+      </div>
+    </a>
 
-      <a id="food" href="/food">
-        <div class="button">
-          <img id="foodIcon" src="food.png" alt="food icon" />
-          <p id="buttonText">Food</p>
-        </div>
-      </a>
-      <!--button for animals-->
-      <a id="animals" href="/animals">
-        <div class="button">
-          <img id="animalsIcon" src="animals.png" alt="animals icon" />
-          <p id="buttonText">Animals</p>
-        </div>
-      </a>
-    </div>
+    <!--button for animals-->
+    <a id="animals" href="/animals">
+      <div id="column" class="button">
+        <img id="animalsIcon" src="animals.png" alt="animals icon" />
+        <p id="buttonText">Animals</p>
+      </div>
+    </a>
   </div>
 
 </div>

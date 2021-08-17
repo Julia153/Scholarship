@@ -6,6 +6,7 @@ import {abb} from "../stores.js";
   import { viewLoginPage } from "../firebase.js";
 
 console.log("this is the users info on the settings page", $user.name);
+console.log($user.uid);
 
 function addCategory() {
 
@@ -45,7 +46,11 @@ function check() {
     </a>
   </div>
 </div>
-
+{#if $user.uid == undefined}
+    <a id="logOutLink" href="/">Log In</a>
+  {:else}
+    <h1 class="header">Hello {$user.name}</h1>
+  {/if}
 <!-- <input type="text" class="input" bind:value={leggo} placeholder="Enter new category here:"> -->
 <button class="button" on:click={addCategory}>Add category</button>
 <div class="select">

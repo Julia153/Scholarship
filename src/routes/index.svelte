@@ -33,13 +33,61 @@
     transition-duration: 0.3s;
   }
 
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: 700px) {
     #buttons {
       display: flex;
       flex-direction: column;
-      margin-left: 50px;
+      margin-left: 60px;
     }
 
+    #login {
+      margin-bottom: 20px;
+    }
+
+    #signup {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    #go {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    #body {
+      height: 1000px;
+    }
+    #titleimg {
+      height: 200px; width: auto; margin-top: 30px; margin-left: 60px;
+    }
+  }
+
+  @media only screen and (min-width: 700px) and (max-width: 1200px) {
+    #buttons {
+      display: flex;
+      flex-direction: column;
+      margin-left: 300px;
+    }
+
+    #login {
+      margin-bottom: 20px;
+    }
+
+    #signup {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    #go {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    #body {
+      height: 1000px;
+    }
+    #titleimg {
+      height: 300px; width: auto; margin-top: 30px; margin-left: 220px;
+    }
   }
 
   @media only screen and (min-width: 1201px) {
@@ -51,26 +99,29 @@
     #signup {
       margin-right: 15px;
     }
+
+    #titleimg {
+      height: 400px; width: auto; margin-top: 30px; margin-left: 320px;
+    }
   }
 </style>
 
 <div id="body">
 
   <img
-    style="height: 400px; width: auto; margin-top: 30px; margin-left: 320px;"
+  id="titleimg"
     src="SkyShipLogo.png"
     alt="Logo" />
   <br />
- 
-<div id="buttons">
-  <button id="login" class="button" on:click={login}>Login</button>
 
-  <button id="signup" class="button" on:click={signup}>Signup</button>
+  <div id="buttons">
+    <button id="login" class="button" on:click={login}>Login</button>
 
-  <a href="/home">
-    <button id="noLoginButton">Go</button>
-  </a>
-</div>
-  
+    <button id="signup" class="button" on:click={signup}>Signup</button>
+
+    <a href="/home">
+      <button id="go">Go</button>
+    </a>
+  </div>
 
 </div>

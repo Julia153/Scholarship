@@ -12,6 +12,7 @@ import 'firebase/firestore'
 import {get } from "svelte/store"
 
 
+
 export function viewLoginPage() {
     let userInfo = get(user)
     if (userInfo.uid == undefined) {
@@ -81,14 +82,16 @@ export async function login(nextPage = undefined) {
         document.getElementById("userOutput").innerHTML = "user not found :( check you typed everything correct or create a new account";
     }
 }
+
 export function saveCategory() {
     // db.collection("users").doc(user.uid).get().set({
     //     Weather: ["windy"],
     // });
-    var sun =
+    console.log(get(user.uid))
+    let userUid = get(user.uid)
         //saves the users information to the database
-        db.collection('users').doc(sun).set({
-            weather: ["bingo", ]
+    db.collection('users').doc(userUid).set({
+            weather: ["bingo", "bullseye"]
                 //add any other information you need to save about the user here eg, teams they play for etc
         })
         //window.location.replace("/home")
