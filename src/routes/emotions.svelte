@@ -98,16 +98,47 @@
 </script>
 
 <style>
-  /* setting the height of the page and the background color*/
-  #body {
-    background-color: #80cddb;
-    height: 800px;
+  @media only screen and (max-width: 800px) {
+    #titleimg {
+      margin-left: 10px;
+      height: 10%;
+      width: auto;
+    }
+
+    #body {
+      height: 2600px;
+    }
   }
 
-  /* setting the button properties for how i want it to look chaning it from the bulma button class*/
+  @media only screen and (min-width: 800px) and (max-width: 1200px) {
+    #titleimg {
+      margin-left: 90px;
+      height: 30%;
+      width: auto;
+    }
+
+    #body {
+      height: 2000px;
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+    #titleimg {
+      margin-left: 300px;
+      height: 500px;
+      width: auto;
+    }
+  }
+  /* setting height of page and background color*/
+  #body {
+    background-color: #80cddb;
+  }
+
+  /* editing the button properties from the bulma button class*/
   .button {
     width: 300px;
     height: 300px;
+    margin: 20px;
     border-style: solid;
     border-width: 10px;
     border-color: #1d3461;
@@ -115,10 +146,17 @@
     background-color: #f5f6f4;
     display: flex;
     flex-direction: column;
-    margin: 20px;
   }
 
-  /* setting the placement of the home button*/
+  /* centering the word buttons*/
+  #container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 100px;
+  }
+
+  /* placement of the home button*/
   #vertical-placement-home {
     margin: 0;
     position: relative;
@@ -134,21 +172,6 @@
     margin-top: 70px;
   }
 
-  /* centering the word buttons*/
-  #container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-left: 100px;
-  }
-
-  img {
-    margin-left: 400px;
-  }
-
-  #body {
-    height: 1300px;
-  }
   #buttonText {
     text-align: center;
     font-size: 20px;
@@ -157,10 +180,7 @@
 
 <div id="body">
   <!--title-->
-  <img
-    style="height: 30%; width: auto;"
-    src="emotionLogo.png"
-    alt="emotions logo" />
+  <img id="titleimg" src="emotionLogo.png" alt="emotions logo" />
   <div id="homeContainer">
     <div id="vertical-placement-home">
       <!--home button-->

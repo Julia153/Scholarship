@@ -30,16 +30,17 @@
     border-radius: 10px;
     background-color: #f5f6f4;
   }
-@media only screen and (max-width: 400px) {
-  #titleimg {
-      height: 200px; width: auto; margin-top: 30px; 
+  @media only screen and (max-width: 400px) {
+    #titleimg {
+      height: 200px;
+      width: auto;
+      margin-top: 30px;
     }
 
     #body {
       height: 2050px;
-
     }
-}
+  }
   @media only screen and (min-width: 400px) and (max-width: 950px) {
     #container3 {
       display: flex;
@@ -52,9 +53,9 @@
       flex-wrap: wrap;
     }
     #titleimg {
-    height: 300px;
-    width: auto;
-  }
+      height: 300px;
+      width: auto;
+    }
   }
 
   @media only screen and (min-width: 950px) {
@@ -70,9 +71,9 @@
       flex-wrap: wrap;
     }
     #titleimg {
-    height: 300px;
-    width: auto;
-  }
+      height: 300px;
+      width: auto;
+    }
   }
 
   /* Changing the color of the buttons for settings and to log out*/
@@ -114,8 +115,6 @@
     height: auto;
     margin-top: 30px;
   }
-
-  
 
   #buttonText {
     color: black;

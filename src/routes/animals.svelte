@@ -95,13 +95,43 @@
 </script>
 
 <style>
-  /* setting the height of the page and background color*/
-  #body {
-    background-color: #80cddb;
-    height: 800px;
+  @media only screen and (max-width: 800px) {
+    #titleimg {
+      margin-left: 10px;
+      height: 10%;
+      width: auto;
+    }
+
+    #body {
+      height: 2600px;
+    }
   }
 
-  /* changing the buttons to look how i want them to from the bulma button class*/
+  @media only screen and (min-width: 800px) and (max-width: 1200px) {
+    #titleimg {
+      margin-left: 90px;
+      height: 30%;
+      width: auto;
+    }
+
+    #body {
+      height: 2000px;
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+    #titleimg {
+      margin-left: 300px;
+      height: 500px;
+      width: auto;
+    }
+  }
+  /* setting height of page and background color*/
+  #body {
+    background-color: #80cddb;
+  }
+
+  /* editing the button properties from the bulma button class*/
   .button {
     width: 300px;
     height: 300px;
@@ -111,6 +141,8 @@
     border-color: #1d3461;
     border-radius: 10px;
     background-color: #f5f6f4;
+    display: flex;
+    flex-direction: column;
   }
 
   /* centering the word buttons*/
@@ -121,7 +153,7 @@
     margin-left: 100px;
   }
 
-  /* setting the placement of the home button*/
+  /* placement of the home button*/
   #vertical-placement-home {
     margin: 0;
     position: relative;
@@ -130,26 +162,11 @@
     transform: translateY(-50%);
   }
 
-  .button {
-    display: flex;
-    flex-direction: column;
-  }
-
   i {
     font-size: 100px;
     color: black;
     text-align: center;
     margin-top: 70px;
-  }
-
-  img {
-    margin-left: 400px;
-    height: 30%;
-    width: auto;
-  }
-
-  #body {
-    height: 1300px;
   }
 
   #buttonText {
@@ -160,7 +177,7 @@
 
 <div id="body">
   <!--Title-->
-  <img src="animalLogo.png" alt="animal category logo" />
+  <img id="titleimg" src="animalLogo.png" alt="animal category logo" />
   <!--Home button-->
   <div id="homeContainer">
     <div id="vertical-placement-home">

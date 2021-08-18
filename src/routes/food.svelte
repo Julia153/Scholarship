@@ -100,10 +100,40 @@
 </script>
 
 <style>
+  @media only screen and (max-width: 800px) {
+    #titleimg {
+      margin-left: 10px;
+      height: 10%;
+      width: auto;
+    }
+
+    #body {
+      height: 2600px;
+    }
+  }
+
+  @media only screen and (min-width: 800px) and (max-width: 1200px) {
+    #titleimg {
+      margin-left: 90px;
+      height: 30%;
+      width: auto;
+    }
+
+    #body {
+      height: 2000px;
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+    #titleimg {
+      margin-left: 300px;
+      height: 500px;
+      width: auto;
+    }
+  }
   /* setting height of page and background color*/
   #body {
     background-color: #80cddb;
-    height: 800px;
   }
 
   /* editing the button properties from the bulma button class*/
@@ -137,6 +167,12 @@
     transform: translateY(-50%);
   }
 
+  #buttonText {
+    text-align: center;
+    font-size: 20px;
+    margin-left: 100px;
+  }
+
   i {
     font-size: 100px;
     color: black;
@@ -144,26 +180,12 @@
     margin-left: 80px;
     margin-top: 70px;
   }
-
-  #buttonText {
-    margin-left: 100px;
-    font-size: 20px;
-  }
-
-  img {
-    margin-left: 400px;
-    height: 30%;
-    width: auto;
-  }
-
-  #body {
-    height: 1300px;
-  }
 </style>
+
 
 <div id="body">
   <!--title-->
-  <img src="foodLogo.png" alt="food category logo" />
+  <img id="titleimg" src="foodLogo.png" alt="food category logo" />
   <!-- home button -->
   <div id="homeContainer">
     <div id="vertical-placement-home">

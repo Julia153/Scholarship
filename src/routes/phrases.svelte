@@ -97,13 +97,43 @@
 </script>
 
 <style>
-  /* setting the height of the page and the background color*/
-  #body {
-    background-color: #80cddb;
-    height: 800px;
+  @media only screen and (max-width: 800px) {
+    #titleimg {
+      margin-left: 10px;
+      height: 10%;
+      width: auto;
+    }
+
+    #body {
+      height: 2600px;
+    }
   }
 
-  /* setting the properties of the buttons */
+  @media only screen and (min-width: 800px) and (max-width: 1200px) {
+    #titleimg {
+      margin-left: 90px;
+      height: 30%;
+      width: auto;
+    }
+
+    #body {
+      height: 2000px;
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+    #titleimg {
+      margin-left: 300px;
+      height: 500px;
+      width: auto;
+    }
+  }
+  /* setting height of page and background color*/
+  #body {
+    background-color: #80cddb;
+  }
+
+  /* editing the button properties from the bulma button class*/
   .button {
     width: 300px;
     height: 300px;
@@ -117,16 +147,6 @@
     flex-direction: column;
   }
 
-  img {
-    margin-left: 400px;
-    height: 30%;
-    width: auto;
-  }
-
-  #body {
-    height: 1300px;
-  }
-
   /* centering the word buttons*/
   #container {
     display: flex;
@@ -135,7 +155,7 @@
     margin-left: 100px;
   }
 
-  /* setting the placement of the home button*/
+  /* placement of the home button*/
   #vertical-placement-home {
     margin: 0;
     position: relative;
@@ -144,7 +164,12 @@
     transform: translateY(-50%);
   }
 
-  /* setting the size and color of the icons*/
+  #buttonText {
+    text-align: center;
+    font-size: 20px;
+    margin-left: 100px;
+  }
+
   i {
     font-size: 100px;
     color: black;
@@ -152,21 +177,11 @@
     margin-left: 80px;
     margin-top: 70px;
   }
-
-  #buttonText {
-    margin-left: 90px;
-    font-size: 20px;
-  }
-
-  #buttonTextBathroom {
-    font-size: 20px;
-    margin-left: 15px;
-  }
 </style>
 
 <div id="body">
   <!--Title-->
-  <img src="phraseLogo.png" alt="phrases logo" />
+  <img id="titleimg" src="phraseLogo.png" alt="phrases logo" />
   <!--linking the home button-->
   <div id="homeContainer">
     <div id="vertical-placement-home">
@@ -206,7 +221,9 @@
     <!--i need to use the bathroom button-->
     <button on:click={bathroom} class="button">
       <i class="fas fa-restroom" />
-      <p id="buttonTextBathroom">I need to use the bathroom</p>
+      <p style="font-size: 20px;" id="buttonTextBathroom">
+        I need to use the bathroom
+      </p>
     </button>
   </div>
 

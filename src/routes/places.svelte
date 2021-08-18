@@ -26,16 +26,16 @@
 
   //saying zoo
   function zoo() {
-    zooCounter++;
-    if (zooCounter <= 2) {
-      let speech = new SpeechSynthesisUtterance("zoo");
-      window.speechSynthesis.speak(speech);
-    } else {
-      alert(
-        "Please only press the button once, sometimes it takes a second for the word to speak"
-      );
-      zooCounter = 0;
-    }
+    // zooCounter++;
+    // if (zooCounter <= 2) {
+    //   let speech = new SpeechSynthesisUtterance("zoo");
+    //   window.speechSynthesis.speak(speech);
+    // } if else {
+    //   alert(
+    //     "Please only press the button once, sometimes it takes a second for the word to speak"
+    //   );
+    //   zooCounter = 0;
+    // }
   }
 
   //saying pool
@@ -97,10 +97,40 @@
 </script>
 
 <style>
+  @media only screen and (max-width: 800px) {
+    #titleimg {
+      margin-left: 10px;
+      height: 10%;
+      width: auto;
+    }
+
+    #body {
+      height: 2600px;
+    }
+  }
+
+  @media only screen and (min-width: 800px) and (max-width: 1200px) {
+    #titleimg {
+      margin-left: 90px;
+      height: 30%;
+      width: auto;
+    }
+
+    #body {
+      height: 2000px;
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+    #titleimg {
+      margin-left: 300px;
+      height: 500px;
+      width: auto;
+    }
+  }
   /* setting height of page and background color*/
   #body {
     background-color: #80cddb;
-    height: 800px;
   }
 
   /* editing the button properties from the bulma button class*/
@@ -145,18 +175,11 @@
     text-align: center;
     font-size: 20px;
   }
-
-  #body {
-    height: 1300px;
-  }
 </style>
 
 <div id="body">
   <!--title-->
-  <img
-    style="margin-left: 400px; height: 30%; width: auto;"
-    src="placeLogo.png"
-    alt="places logo" />
+  <img id="titleimg" src="placeLogo.png" alt="places logo" />
   <!--home button-->
   <div id="homeContainer">
     <div id="vertical-placement-home">

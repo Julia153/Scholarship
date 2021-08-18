@@ -58,7 +58,10 @@
       height: 1000px;
     }
     #titleimg {
-      height: 200px; width: auto; margin-top: 30px; margin-left: 60px;
+      height: 200px;
+      width: auto;
+      margin-top: 30px;
+      margin-left: 60px;
     }
   }
 
@@ -86,7 +89,10 @@
       height: 1000px;
     }
     #titleimg {
-      height: 300px; width: auto; margin-top: 30px; margin-left: 220px;
+      height: 300px;
+      width: auto;
+      margin-top: 30px;
+      margin-left: 220px;
     }
   }
 
@@ -101,17 +107,17 @@
     }
 
     #titleimg {
-      height: 400px; width: auto; margin-top: 30px; margin-left: 320px;
+      height: 400px;
+      width: auto;
+      margin-top: 30px;
+      margin-left: 320px;
     }
   }
 </style>
 
 <div id="body">
 
-  <img
-  id="titleimg"
-    src="SkyShipLogo.png"
-    alt="Logo" />
+  <img id="titleimg" src="SkyShipLogo.png" alt="Logo" />
   <br />
 
   <div id="buttons">
