@@ -1,17 +1,23 @@
 <script>
+  // setting all of the word buttons to have a varible which counts how many times the button has been pressed starting at 0
   let catCounter = 0;
   let dogCounter = 0;
   let frogCounter = 0;
   let horseCounter = 0;
   let fishCounter = 0;
   let birdCounter = 0;
+
   //Accessing the api text to speech api library
   let speech = new SpeechSynthesisUtterance();
   speech.lang = "en";
 
   //saying frog
+  //adding 1 to the counter varible
+  //if the button has been pressed 2 or less times it will say frog
+  //if the button has been pressed more than 2 times it will tell you to stop pressing the button multiple times and then the counter will reset to 0
   function frog() {
     frogCounter++;
+
     if (frogCounter <= 2) {
       let speech = new SpeechSynthesisUtterance("frog");
       window.speechSynthesis.speak(speech);
@@ -24,6 +30,9 @@
   }
 
   //saying bird
+  //adding 1 to the counter varible
+  //if the button has been pressed 2 or less times it will say frog
+  //if the button has been pressed more than 2 times it will tell you to stop pressing the button multiple times and then the counter will reset to 0
   function bird() {
     birdCounter++;
     if (birdCounter <= 2) {
@@ -38,6 +47,9 @@
   }
 
   //saying dog
+  //adding 1 to the counter varible
+  //if the button has been pressed 2 or less times it will say frog
+  //if the button has been pressed more than 2 times it will tell you to stop pressing the button multiple times and then the counter will reset to 0
   function dog() {
     dogCounter++;
     if (dogCounter <= 2) {
@@ -52,6 +64,9 @@
   }
 
   //saying cat
+  //adding 1 to the counter varible
+  //if the button has been pressed 2 or less times it will say frog
+  //if the button has been pressed more than 2 times it will tell you to stop pressing the button multiple times and then the counter will reset to 0
   function cat() {
     catCounter++;
     if (catCounter <= 2) {
@@ -66,6 +81,9 @@
   }
 
   //saying fish
+  //adding 1 to the counter varible
+  //if the button has been pressed 2 or less times it will say frog
+  //if the button has been pressed more than 2 times it will tell you to stop pressing the button multiple times and then the counter will reset to 0
   function fish() {
     fishCounter++;
     if (fishCounter <= 2) {
@@ -80,6 +98,9 @@
   }
 
   //saying horse
+  //adding 1 to the counter varible
+  //if the button has been pressed 2 or less times it will say frog
+  //if the button has been pressed more than 2 times it will tell you to stop pressing the button multiple times and then the counter will reset to 0
   function horse() {
     horseCounter++;
     if (horseCounter <= 2) {
@@ -95,38 +116,42 @@
 </script>
 
 <style>
+  /* All of the styling for phone/small ipad sized screen */
   @media only screen and (max-width: 800px) {
+    /* sizing and centering the title img */
     #titleimg {
       margin-left: 10px;
       height: 10%;
       width: auto;
     }
-
+    /* Setting the height of the page */
     #body {
       height: 2600px;
     }
   }
-
+  /* All the styling for large ipad size screen */
   @media only screen and (min-width: 800px) and (max-width: 1200px) {
+    /* centering and sizing the title img */
     #titleimg {
       margin-left: 90px;
       height: 30%;
       width: auto;
     }
-
+    /* setting the height of the page */
     #body {
       height: 2000px;
     }
   }
-
+  /* All of the styling for a laptop sized screen */
   @media only screen and (min-width: 1200px) {
+    /* centering and sizing the title img */
     #titleimg {
       margin-left: 300px;
       height: 500px;
       width: auto;
     }
   }
-  /* setting height of page and background color*/
+  /* setting height of page */
   #body {
     background-color: #80cddb;
   }
@@ -161,14 +186,14 @@
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
   }
-
+  /* Setting the icons sizing and colours */
   i {
     font-size: 100px;
     color: black;
     text-align: center;
     margin-top: 70px;
   }
-
+  /* making the text in the word button be centered and sized */
   #buttonText {
     text-align: center;
     font-size: 20px;
@@ -176,12 +201,13 @@
 </style>
 
 <div id="body">
-  <!--Title-->
+  <!--Title img-->
   <img id="titleimg" src="animalLogo.png" alt="animal category logo" />
   <!--Home button-->
   <div id="homeContainer">
     <div id="vertical-placement-home">
       <a href="/home">
+        <!-- styling the home button size and color -->
         <i style=" font-size: 100px; color: black;" class="fas fa-home" />
       </a>
     </div>
@@ -189,7 +215,7 @@
 
   <div id="container">
 
-    <!--Rabbit button-->
+    <!--frog button-->
     <div on:click={frog} class="button">
       <i class="fas fa-frog" />
       <p id="buttonText">Frog</p>

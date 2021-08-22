@@ -1,4 +1,5 @@
 <script>
+  //setting varibles which count how many times the user presses the word buttons starting at 0
   let waterCounter = 0;
   let pizzaCounter = 0;
   let eggCounter = 0;
@@ -11,6 +12,9 @@
   speech.lang = "en";
 
   //saying pizza
+  //adding 1 to the counter varible
+  //if the button has been pressed 2 or less times it will say frog
+  //if the button has been pressed more than 2 times it will tell you to stop pressing the button multiple times and then the counter will reset to 0
 
   function pizza() {
     pizzaCounter++;
@@ -26,6 +30,9 @@
   }
 
   //saying apple
+  //adding 1 to the counter varible
+  //if the button has been pressed 2 or less times it will say frog
+  //if the button has been pressed more than 2 times it will tell you to stop pressing the button multiple times and then the counter will reset to 0
   function apple() {
     appleCounter++;
 
@@ -41,6 +48,9 @@
   }
 
   //saying water
+  //adding 1 to the counter varible
+  //if the button has been pressed 2 or less times it will say frog
+  //if the button has been pressed more than 2 times it will tell you to stop pressing the button multiple times and then the counter will reset to 0
   function water() {
     waterCounter++;
     if (waterCounter <= 2) {
@@ -55,6 +65,9 @@
   }
 
   //saying carrot
+  //adding 1 to the counter varible
+  //if the button has been pressed 2 or less times it will say frog
+  //if the button has been pressed more than 2 times it will tell you to stop pressing the button multiple times and then the counter will reset to 0
   function carrot() {
     carrotCounter++;
 
@@ -70,6 +83,9 @@
   }
 
   //saying egg
+  //adding 1 to the counter varible
+  //if the button has been pressed 2 or less times it will say frog
+  //if the button has been pressed more than 2 times it will tell you to stop pressing the button multiple times and then the counter will reset to 0
   function egg() {
     eggCounter++;
     if (eggCounter <= 2) {
@@ -84,6 +100,9 @@
   }
 
   //saying cake
+  //adding 1 to the counter varible
+  //if the button has been pressed 2 or less times it will say frog
+  //if the button has been pressed more than 2 times it will tell you to stop pressing the button multiple times and then the counter will reset to 0
   function cake() {
     cakeCounter++;
 
@@ -100,38 +119,44 @@
 </script>
 
 <style>
+  /* all of the styling for a phone/small ipad screen */
   @media only screen and (max-width: 800px) {
+    /* sizing and centering the title img */
     #titleimg {
       margin-left: 10px;
       height: 10%;
       width: auto;
     }
-
+    /* setting the height of the page */
     #body {
       height: 2600px;
     }
   }
 
+  /* all of the styling for a large ipad screen */
   @media only screen and (min-width: 800px) and (max-width: 1200px) {
+    /* sizing and centering the title img */
     #titleimg {
       margin-left: 90px;
       height: 30%;
       width: auto;
     }
-
+    /* setting the height of the page */
     #body {
       height: 2000px;
     }
   }
 
+  /* all of the styling for a laptop sized screen */
   @media only screen and (min-width: 1200px) {
+    /* sizing and centering the title img */
     #titleimg {
       margin-left: 300px;
       height: 500px;
       width: auto;
     }
   }
-  /* setting height of page and background color*/
+  /* setting the background color*/
   #body {
     background-color: #80cddb;
   }
@@ -167,12 +192,14 @@
     transform: translateY(-50%);
   }
 
+  /* Sizing, centering and placing the text inside the buttons */
   #buttonText {
     text-align: center;
     font-size: 20px;
     margin-left: 100px;
   }
 
+  /* sizing, centering and placing the icons */
   i {
     font-size: 100px;
     color: black;
@@ -182,14 +209,14 @@
   }
 </style>
 
-
 <div id="body">
-  <!--title-->
+  <!--title img-->
   <img id="titleimg" src="foodLogo.png" alt="food category logo" />
   <!-- home button -->
   <div id="homeContainer">
     <div id="vertical-placement-home">
       <a href="/home">
+        <!-- home icon styling -->
         <i style=" font-size: 100px; color: black;" class="fas fa-home" />
       </a>
     </div>

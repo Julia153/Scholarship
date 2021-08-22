@@ -1,15 +1,20 @@
 <script>
+  //setting varibles to count how many times the user presses the word buttons starting at 0
   let hurtCounter = 0;
   let tiredCounter = 0;
   let thirstyCounter = 0;
   let bathroomCounter = 0;
   let helpCounter = 0;
   let hungryCounter = 0;
+
   //accessing the api library
   let speech = new SpeechSynthesisUtterance();
   speech.lang = "en";
 
   //saying i am hurt
+  //adding 1 to the counter varible
+  //if the button has been pressed 2 or less times it will say frog
+  //if the button has been pressed more than 2 times it will tell you to stop pressing the button multiple times and then the counter will reset to 0
   function hurt() {
     hurtCounter++;
     if (hurtCounter <= 2) {
@@ -24,6 +29,9 @@
   }
 
   //saying i need to use the bathroom
+  //adding 1 to the counter varible
+  //if the button has been pressed 2 or less times it will say frog
+  //if the button has been pressed more than 2 times it will tell you to stop pressing the button multiple times and then the counter will reset to 0
   function bathroom() {
     bathroomCounter++;
     if (bathroomCounter <= 2) {
@@ -38,6 +46,9 @@
   }
 
   //saying i need help
+  //adding 1 to the counter varible
+  //if the button has been pressed 2 or less times it will say frog
+  //if the button has been pressed more than 2 times it will tell you to stop pressing the button multiple times and then the counter will reset to 0
   function help() {
     helpCounter++;
     if (helpCounter <= 2) {
@@ -52,6 +63,9 @@
   }
 
   //saying i am hungry
+  //adding 1 to the counter varible
+  //if the button has been pressed 2 or less times it will say frog
+  //if the button has been pressed more than 2 times it will tell you to stop pressing the button multiple times and then the counter will reset to 0
   function hungry() {
     hungryCounter++;
     if (hungryCounter <= 2) {
@@ -66,6 +80,9 @@
   }
 
   //saying i am thirsty
+  //adding 1 to the counter varible
+  //if the button has been pressed 2 or less times it will say frog
+  //if the button has been pressed more than 2 times it will tell you to stop pressing the button multiple times and then the counter will reset to 0
   function thirsty() {
     thirstyCounter++;
 
@@ -81,6 +98,9 @@
   }
 
   //saying i am tired
+  //adding 1 to the counter varible
+  //if the button has been pressed 2 or less times it will say frog
+  //if the button has been pressed more than 2 times it will tell you to stop pressing the button multiple times and then the counter will reset to 0
   function tired() {
     tiredCounter++;
 
@@ -97,38 +117,44 @@
 </script>
 
 <style>
+  /* all of the styling for phone/smal ipad screen */
   @media only screen and (max-width: 800px) {
+    /* sizing and centering the title img */
     #titleimg {
       margin-left: 10px;
       height: 10%;
       width: auto;
     }
-
+    /* setting the height of the page */
     #body {
       height: 2600px;
     }
   }
 
+  /* all of the styling for a large ipad screen */
   @media only screen and (min-width: 800px) and (max-width: 1200px) {
+    /* sizing and centering the title img */
     #titleimg {
       margin-left: 90px;
       height: 30%;
       width: auto;
     }
-
+    /* setting the height of the page */
     #body {
       height: 2000px;
     }
   }
 
+  /* all of the styling for a laptop screen */
   @media only screen and (min-width: 1200px) {
+    /* sizing and centering the title img */
     #titleimg {
       margin-left: 300px;
       height: 500px;
       width: auto;
     }
   }
-  /* setting height of page and background color*/
+  /* setting the background color*/
   #body {
     background-color: #80cddb;
   }
@@ -163,13 +189,14 @@
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
   }
-
+  /* sizing, centering the text inside the buttons */
   #buttonText {
     text-align: center;
     font-size: 20px;
     margin-left: 100px;
   }
 
+  /* sizing and centering the icons */
   i {
     font-size: 100px;
     color: black;
@@ -180,7 +207,7 @@
 </style>
 
 <div id="body">
-  <!--Title-->
+  <!--Title img-->
   <img id="titleimg" src="phraseLogo.png" alt="phrases logo" />
   <!--linking the home button-->
   <div id="homeContainer">

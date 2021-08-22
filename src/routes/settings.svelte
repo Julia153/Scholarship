@@ -1,35 +1,41 @@
 <script>
-
- //import { onMount } from "svelte";
+  //importing the user details
   import { user } from "../stores.js";
+  //importing the logout function
   import { viewLoginPage } from "../firebase.js";
 
-console.log("this is the users info on the settings page", $user.name);
-console.log($user.uid);
-let categories = [];
-let newCategory 
-let output
-function addCategory() {
-  categories.push(newCategory)
-  categories.forEach(listCategories);
-  
-}
+  //setting the categories as a varible
+  let categories = [];
+  //setting newCategory as a varible
+  let newCategory;
+  //setting output as a varible
+  let output;
 
-function listCategories() {
- output = categories
-}
+  //adding a category function
+  function addCategory() {
+    //adding the category the user entered to the categories arrary
+    categories.push(newCategory);
+    //looping through the catgeories and calling another function
+    categories.forEach(listCategories);
+  }
 
-
+  function listCategories() {
+    //outputing the categories array
+    output = categories;
+  }
 </script>
+
 <style>
+  /* setting the page to all have a margin */
   * {
     margin: 10px;
   }
+  /* centering the title */
   h1 {
     text-align: center;
   }
-  
 
+  /* placing the home button */
   #vertical-placement-home {
     margin: 0;
     position: relative;
@@ -37,33 +43,32 @@ function listCategories() {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
   }
-
-  
 </style>
 
+<!-- title -->
 <h1 class="title">Settings</h1>
 
+<!-- home button -->
 <div id="homeContainer">
   <div id="vertical-placement-home">
     <a href="/home">
-       <i style=" font-size: 100px; color: black;" class="fas fa-home" />
+      <i style=" font-size: 100px; color: black;" class="fas fa-home" />
     </a>
   </div>
 </div>
+<!-- if the user is undefined have a log out link -->
 {#if $user.uid == undefined}
-    <a id="logOutLink" href="/">Log In</a>
-  {:else}
-    <h1 class="header">Hello {$user.name}</h1>
-  {/if}
-<input type="text" class="input" bind:value={newCategory} placeholder="Enter new category here:"> 
+  <a id="logOutLink" href="/">Log In</a>
+{:else}
+  <!-- if the user is defined say hello to the user -->
+  <h1 class="header">Hello {$user.name}</h1>
+{/if}
+<!-- text input for the user  -->
+<input
+  type="text"
+  class="input"
+  bind:value={newCategory}
+  placeholder="Enter new category here:" />
+<!-- button to send catgeory user entered -->
 <button class="button" on:click={addCategory}>Add category</button>
 <p>{output}</p>
-
-
-
-
-
-
-
-
-

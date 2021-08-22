@@ -1,5 +1,5 @@
 <script>
-  //setting counter to 0
+  //setting varibles to count the number of times the user presses the buttons starting at 0
   let happyCounter = 0;
   let sadCounter = 0;
   let frustratedCounter = 0;
@@ -7,12 +7,14 @@
   let excitedCounter = 0;
   let scaredCounter = 0;
 
-  let modal = "modal-content";
   //accessing the api library
   let speech = new SpeechSynthesisUtterance();
   speech.lang = "en";
 
   //saying frustrated
+  //adding 1 to the counter varible
+  //if the button has been pressed 2 or less times it will say frog
+  //if the button has been pressed more than 2 times it will tell you to stop pressing the button multiple times and then the counter will reset to 0
   function frustrated() {
     frustratedCounter++;
     if (frustratedCounter <= 2) {
@@ -27,6 +29,9 @@
   }
 
   //saying scared
+  //adding 1 to the counter varible
+  //if the button has been pressed 2 or less times it will say frog
+  //if the button has been pressed more than 2 times it will tell you to stop pressing the button multiple times and then the counter will reset to 0
   function scared() {
     scaredCounter++;
     if (scaredCounter <= 2) {
@@ -41,6 +46,9 @@
   }
 
   //saying sad
+  //adding 1 to the counter varible
+  //if the button has been pressed 2 or less times it will say frog
+  //if the button has been pressed more than 2 times it will tell you to stop pressing the button multiple times and then the counter will reset to 0
   function sad() {
     sadCounter++;
     if (sadCounter <= 2) {
@@ -55,6 +63,9 @@
   }
 
   //saying happy
+  //adding 1 to the counter varible
+  //if the button has been pressed 2 or less times it will say frog
+  //if the button has been pressed more than 2 times it will tell you to stop pressing the button multiple times and then the counter will reset to 0
   function happy() {
     happyCounter++;
     if (happyCounter <= 2) {
@@ -69,6 +80,9 @@
   }
 
   //saying excited
+  //adding 1 to the counter varible
+  //if the button has been pressed 2 or less times it will say frog
+  //if the button has been pressed more than 2 times it will tell you to stop pressing the button multiple times and then the counter will reset to 0
   function excited() {
     excitedCounter++;
     if (excitedCounter <= 2) {
@@ -83,6 +97,9 @@
   }
 
   //saying angry
+  //adding 1 to the counter varible
+  //if the button has been pressed 2 or less times it will say frog
+  //if the button has been pressed more than 2 times it will tell you to stop pressing the button multiple times and then the counter will reset to 0
   function angry() {
     angryCounter++;
     if (angryCounter <= 2) {
@@ -98,30 +115,33 @@
 </script>
 
 <style>
+  /* all of the styling for phone and small ipad screens */
   @media only screen and (max-width: 800px) {
+    /* title img sizing and centering */
     #titleimg {
       margin-left: 10px;
       height: 10%;
       width: auto;
     }
-
+    /* setting the height of the page */
     #body {
       height: 2600px;
     }
   }
-
+  /* all of the styling for large ipad screen */
   @media only screen and (min-width: 800px) and (max-width: 1200px) {
+    /* sizing and centering the title img */
     #titleimg {
       margin-left: 90px;
       height: 30%;
       width: auto;
     }
-
+    /* setting the height of the page */
     #body {
       height: 2000px;
     }
   }
-
+  /* all of the styling for a laptop sized screen */
   @media only screen and (min-width: 1200px) {
     #titleimg {
       margin-left: 300px;
@@ -129,7 +149,7 @@
       width: auto;
     }
   }
-  /* setting height of page and background color*/
+  /* setting background color*/
   #body {
     background-color: #80cddb;
   }
@@ -164,14 +184,14 @@
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
   }
-
+  /* Sizing and setting the colour and placment of the icons */
   i {
     font-size: 100px;
     color: black;
     text-align: center;
     margin-top: 70px;
   }
-
+  /* centering and sizing the word buttons text */
   #buttonText {
     text-align: center;
     font-size: 20px;
@@ -179,7 +199,7 @@
 </style>
 
 <div id="body">
-  <!--title-->
+  <!--title img-->
   <img id="titleimg" src="emotionLogo.png" alt="emotions logo" />
   <div id="homeContainer">
     <div id="vertical-placement-home">
