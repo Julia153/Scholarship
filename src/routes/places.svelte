@@ -26,16 +26,16 @@
 
   //saying zoo
   function zoo() {
-    // zooCounter++;
-    // if (zooCounter <= 2) {
-    //   let speech = new SpeechSynthesisUtterance("zoo");
-    //   window.speechSynthesis.speak(speech);
-    // } if else {
-    //   alert(
-    //     "Please only press the button once, sometimes it takes a second for the word to speak"
-    //   );
-    //   zooCounter = 0;
-    // }
+    zooCounter++;
+    if (zooCounter <= 2) {
+      let speech = new SpeechSynthesisUtterance("zoo");
+      window.speechSynthesis.speak(speech);
+    } else {
+      alert(
+        "Please only press the button once, sometimes it takes a second for the word to speak"
+      );
+      zooCounter = 0;
+    }
   }
 
   //saying pool
@@ -190,11 +190,7 @@
   </div>
 
   <div id="container">
-    <!--home button-->
-    <div id="homePlaceDiv" on:click={homePlace} class="button">
-      <i id="homePlace" class="fas fa-home" />
-      <p id="buttonText">Home</p>
-    </div>
+    
     <!--park button-->
     <div id="parkDiv" on:click={park} class="button">
       <i class="fas fa-tree" />
@@ -222,6 +218,11 @@
     <div id="poolDiv" on:click={pool} class="button">
       <i class="fas fa-swimming-pool" />
       <p id="buttonText">Pool</p>
+    </div>
+    <!--home button-->
+    <div id="homePlaceDiv" on:click={homePlace} class="button">
+      <i id="homePlace" class="fas fa-home" />
+      <p id="buttonText">Home</p>
     </div>
 
   </div>

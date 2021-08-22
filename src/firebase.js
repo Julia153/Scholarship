@@ -53,11 +53,12 @@ export async function signup() {
 
     //saves the users information to the database
     db.collection('users').doc(loginData.user.uid).set({
-            email: loginData.user.email,
-            name: loginData.user.displayName
-                //add any other information you need to save about the user here eg, teams they play for etc
-        })
-        //window.location.replace("/home")
+        email: loginData.user.email,
+        name: loginData.user.displayName
+
+
+    })
+
 
 }
 
@@ -91,30 +92,13 @@ export function saveCategory() {
     let userUid = get(user.uid)
         //saves the users information to the database
     db.collection('users').doc(userUid).set({
-            weather: ["bingo", "bullseye"]
-                //add any other information you need to save about the user here eg, teams they play for etc
-        })
-        //window.location.replace("/home")
+        weather: ["bingo", "bullseye"]
+
+    })
+
 
 }
 
-//console.log(user.uid)
-//var userUid = get(user);
-//let newCategory = "weather";
-//db.collection("categories").add({
-//    Weather: ["windy", ]
-// }).then((docRef) => {})
-
-// let usersCollection = db.collection("users").doc();
-// return usersCollection.update({
-//         "weather": ["windy", ]
-//     }).then(() => {
-//         console.log("Document successfully updated!");
-//     })
-//     .catch((error) => {
-//         // The document probably doesn't exist.
-//         console.error("Error updating document: ", error);
-//     });
 
 
 //logout function

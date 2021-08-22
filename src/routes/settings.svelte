@@ -1,21 +1,25 @@
 <script>
-import {  saveCategory } from "../firebase.js";
-import {abb} from "../stores.js";
+
  //import { onMount } from "svelte";
   import { user } from "../stores.js";
   import { viewLoginPage } from "../firebase.js";
 
 console.log("this is the users info on the settings page", $user.name);
 console.log($user.uid);
-
+let categories = [];
+let newCategory 
+let output
 function addCategory() {
-
-  saveCategory()
+  categories.push(newCategory)
+  categories.forEach(listCategories);
+  
 }
 
-function check() {
-  console.log(user);
+function listCategories() {
+ output = categories
 }
+
+
 </script>
 <style>
   * {
@@ -51,14 +55,11 @@ function check() {
   {:else}
     <h1 class="header">Hello {$user.name}</h1>
   {/if}
-<!-- <input type="text" class="input" bind:value={leggo} placeholder="Enter new category here:"> -->
+<input type="text" class="input" bind:value={newCategory} placeholder="Enter new category here:"> 
 <button class="button" on:click={addCategory}>Add category</button>
-<div class="select">
-<select>
-<option>Weather</option>
-<option>Numbers</option>
-</select>
-</div>
+<p>{output}</p>
+
+
 
 
 
