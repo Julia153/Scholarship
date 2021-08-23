@@ -1,28 +1,28 @@
 //importing the user store so that we are able to set the user values during login / sign up
-
-import { user, abb } from "./stores"
-//import { newCategory } from "./stores"
-
+import { user } from "./stores"
 
 //importing firebase to the firebase.js file then importing the auth and firestore (database) module
 import firebase from "firebase/app"
 import 'firebase/auth'
 import 'firebase/firestore'
 
+//this lets you access user data
 import {get } from "svelte/store"
 
 
-
+//function that gets the user info
 export function viewLoginPage() {
     let userInfo = get(user)
     if (userInfo.uid == undefined) {
         window.location.replace("/");
     }
 }
+
+//function that takes you to the home page
 export function homePage() {
     window.location.replace("/home")
 }
-//configuration variables for your specfic firebase project (do not copy other ones from places like w3 schools @julia)
+//configuration variables for your specfic firebase project 
 const firebaseConfig = {
     apiKey: "AIzaSyB-qdG6j6fDvmbwd5yAO9kh0EFtMTg-B1g",
     authDomain: "skyship-communication.firebaseapp.com",
@@ -85,14 +85,11 @@ export async function login(nextPage = undefined) {
 }
 
 export function saveCategory() {
-    // db.collection("users").doc(user.uid).get().set({
-    //     Weather: ["windy"],
-    // });
     console.log(get(user.uid))
     let userUid = get(user.uid)
         //saves the users information to the database
     db.collection('users').doc(userUid).set({
-        weather: ["bingo", "bullseye"]
+        Category1: ["word1", "word2"]
 
     })
 

@@ -71,4 +71,5 @@
   placeholder="Enter new category here:" />
 <!-- button to send catgeory user entered -->
 <button class="button" on:click={addCategory}>Add category</button>
+<!-- output of the catgeories user entered -->
 <p>{output}</p>
