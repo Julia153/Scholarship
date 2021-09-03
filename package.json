@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "@sveltejs/adapter-node": "^1.0.0-next.26",
+    "@sveltejs/adapter-static": "^1.0.0-next.17",
     "@sveltejs/kit": "^1.0.0-next.115",
     "bulma": "^0.9.3",
     "sass": "^1.35.1",
@@ -19,6 +20,7 @@
   },
   "type": "module",
   "dependencies": {
-    "firebase": "^8.6.8"
+    "firebase": "^8.6.8",
+    "firebase-tools": "^9.16.5"
   }
 }

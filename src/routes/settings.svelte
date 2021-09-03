@@ -13,6 +13,7 @@
 
   //adding a category function
   function addCategory() {
+    if (newCategory )
     //adding the category the user entered to the categories arrary
     categories.push(newCategory);
     //looping through the catgeories and calling another function
@@ -67,6 +68,7 @@
 <input
   type="text"
   class="input"
+  maxlength="20"
   bind:value={newCategory}
   placeholder="Enter new category here:" />
 <!-- button to send catgeory user entered -->
